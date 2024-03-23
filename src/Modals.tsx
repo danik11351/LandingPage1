@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
 
 function ReactLoginModel() {
