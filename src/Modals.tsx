@@ -19,13 +19,13 @@ function ReactLoginModel() {
     setPassword("");
   };
 
-  const handleLoginSubmit = (event) => {
+  const handleLoginSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // ogin logic here
     handleCloseLoginModal();
   };
 
-  const handleRegisterSubmit = (event) => {
+  const handleRegisterSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // registration logic here
     handleCloseRegisterModal();
