@@ -11,7 +11,7 @@ export default function HeroSection() {
           <br />
           Shade Pro.
         </div>
-        <div className="lg:mt-3 sm:mt-3 sm:mx-auto">
+        <div className="lg:mt-3 mt-5 sm:mx-auto">
           <p>
             With lots of unique blocks, you can easily build a page without
             <br />

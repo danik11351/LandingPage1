@@ -4,13 +4,13 @@ import Card3 from "./assets/card-red.svg";
 import ReviewPFP from "./assets/ReviewSectionPFP.svg";
 function Services() {
   return (
-    <div className="lg:mt-32">
+    <div className="lg:mt-32 mt-16">
       <div id="services-text" className="text-center sm:my-10">
         <div>
           <p className="text-rose-500">Our Services</p>
         </div>
         <div>
-          <h1 className="font-bold text-5xl sm:mx-1">
+          <h1 className="font-bold text-5xl mx-3 lg:mx-0">
             We provide great services for our customers based
             <br /> on needs
           </h1>
