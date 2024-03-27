@@ -1,7 +1,8 @@
 import "./App.css";
 import { HeroSection } from "./HeroSection";
 import { NavBar } from "./NavBar";
-import { Services } from "./Services";
+import { Story } from "./OurStory";
+import { Services, ServicesReviewSection } from "./Services";
 
 function App() {
   return (
@@ -14,6 +15,11 @@ function App() {
       </div>
       <div>
         <Services />
+        <ServicesReviewSection />
+      </div>
+      <hr className="w-1/2 ms-auto me-auto mt-32"></hr>
+      <div>
+        <Story />
       </div>
     </div>
   );

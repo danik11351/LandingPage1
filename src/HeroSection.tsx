@@ -11,7 +11,7 @@ export default function HeroSection() {
           <br />
           Shade Pro.
         </div>
-        <div className="lg:mt-3 sm:mt-3">
+        <div className="lg:mt-3 sm:mt-3 sm:mx-auto">
           <p>
             With lots of unique blocks, you can easily build a page without
             <br />
@@ -30,7 +30,7 @@ export default function HeroSection() {
       </div>
       <div id="hero-section-img">
         <img
-          className="ms-auto me-auto mt-10 lg:mt-4 w-96"
+          className="ms-auto me-auto mt-10 lg:mt-4 lg:w-96 xs:w-60 sm:mb-5"
           src={ProfilePicture}
           alt=""
         />
