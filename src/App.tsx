@@ -6,7 +6,7 @@ import { OurStoryStats, Story } from "./OurStory";
 import { Services, ServicesReviewSection } from "./Services";
 import { WhyUsFun, WhyUsStartProject } from "./WhyUs";
 import { Testimonial } from "./Testimonial";
-import { FooterSection1, FooterSection2 } from "./Footer";
+import { FooterSection1, FooterSection2, FooterSection3 } from "./Footer";
 
 function App() {
   return (
@@ -40,6 +40,7 @@ function App() {
       <footer>
         <FooterSection1 />
         <FooterSection2 />
+        <FooterSection3 />
       </footer>
     </div>
   );

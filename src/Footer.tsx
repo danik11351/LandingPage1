@@ -1,4 +1,4 @@
-import { FiTwitter } from "react-icons/fi";
+import { FaTwitter } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -9,16 +9,16 @@ function FooterSection1() {
       style={{
         backgroundColor: "#161C2D",
       }}
-      className="p-10 flex flex-col lg:flex-row justify-around"
+      className="p-10 flex flex-col lg:flex-row justify-around text-center lg:text-left"
     >
       <div>
         <div>
-          <h1 className="text-white font-bold text-2xl">
+          <h1 className="text-white font-bold text-2xl mb-2 lg:mb-0">
             Ready to launch your next project?
           </h1>
         </div>
         <div>
-          <p className="text-slate-400">
+          <p className="text-slate-400 mb-2 lg:mb-0">
             With lots of unique blocks, you can easily build a page without
             coding.
             <br /> Build your next landing page.
@@ -39,7 +39,7 @@ function FooterSection2() {
       style={{
         backgroundColor: "#161C2D",
       }}
-      className="p-10 flex flex-col lg:flex-row"
+      className="p-10 flex flex-col lg:flex-row justify-around text-center lg:text-left"
     >
       <div id="footer-header+socials" className="gap-64">
         <div>
@@ -54,22 +54,122 @@ function FooterSection2() {
             </p>
           </div>
         </div>
-        <div id="socials" className="mt-3 flex gap-5">
+        <div id="socials" className="mt-3 flex gap-5 justify-center mb-6 mt-6 ">
           <div id="twitter">
-            <FiTwitter className="text-slate-400" />
+            <FaTwitter className="text-slate-400 transform transition duration-500 hover:scale-150 hover:text-blue-400" />
           </div>
           <div id="facebook">
-            <FaSquareFacebook className="text-slate-400" />
+            <FaSquareFacebook className="text-slate-400 transform transition duration-500 hover:scale-150 hover:text-blue-500" />
           </div>
           <div id="instagram">
-            <FaInstagram className="text-slate-400" />
+            <FaInstagram className="text-slate-400 transform transition duration-500 hover:scale-150 hover:text-purple-600" />
           </div>
           <div id="linkedin">
-            <FaLinkedin className="text-slate-400" />
+            <FaLinkedin className="text-slate-400 transform transition duration-500 hover:scale-150 hover:text-blue-600" />
           </div>
         </div>
+      </div>
+      <div>
+        <h2 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">
+          Company
+        </h2>
+        <ul className="text-white dark:text-gray-400 font-medium">
+          <li className="mb-4">
+            <a href="#" className=" hover:underline">
+              About
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Careers
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Brand Center
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">
+          Company
+        </h2>
+        <ul className="text-white dark:text-gray-400 font-medium">
+          <li className="mb-4">
+            <a href="#" className=" hover:underline">
+              About
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Careers
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Brand Center
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 className="mb-6 text-sm font-semibold text-gray-400 uppercase dark:text-white">
+          Company
+        </h2>
+        <ul className="text-white dark:text-gray-400 font-medium">
+          <li className="mb-4">
+            <a href="#" className=" hover:underline">
+              About
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Careers
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Brand Center
+            </a>
+          </li>
+          <li className="mb-4">
+            <a href="#" className="hover:underline">
+              Blog
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
 }
-export { FooterSection1, FooterSection2 };
+function FooterSection3() {
+  return (
+    <div
+      style={{
+        backgroundColor: "#161C2D",
+      }}
+    >
+      <div className="flex justify-center">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          © 2023{" "}
+          <a href="#" className="hover:underline">
+            Brainwave.io™
+          </a>
+          . All Rights Reserved.
+        </span>
+      </div>
+    </div>
+  );
+}
+export { FooterSection1, FooterSection2, FooterSection3 };
