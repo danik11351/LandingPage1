@@ -5,6 +5,8 @@ import { NavBar } from "./NavBar";
 import { OurStoryStats, Story } from "./OurStory";
 import { Services, ServicesReviewSection } from "./Services";
 import { WhyUsFun, WhyUsStartProject } from "./WhyUs";
+import { Testimonial } from "./Testimonial";
+import { FooterSection1, FooterSection2 } from "./Footer";
 
 function App() {
   return (
@@ -27,13 +29,18 @@ function App() {
       <div>
         <WhyUsFun />
       </div>
-      <hr className="w-1/2 ms-auto me-auto mt-32"></hr>
+      <hr className="w-1/2 ms-auto me-auto mt-16"></hr>
       <div>
         <WhyUsStartProject />
       </div>
       <div>
         <CaseStudyHero />
+        <Testimonial />
       </div>
+      <footer>
+        <FooterSection1 />
+        <FooterSection2 />
+      </footer>
     </div>
   );
 }
