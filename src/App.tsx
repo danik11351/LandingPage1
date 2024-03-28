@@ -1,4 +1,5 @@
 import "./App.css";
+import { CaseStudyHero } from "./CaseStudy";
 import { HeroSection } from "./HeroSection";
 import { NavBar } from "./NavBar";
 import { OurStoryStats, Story } from "./OurStory";
@@ -29,6 +30,9 @@ function App() {
       <hr className="w-1/2 ms-auto me-auto mt-32"></hr>
       <div>
         <WhyUsStartProject />
+      </div>
+      <div>
+        <CaseStudyHero />
       </div>
     </div>
   );

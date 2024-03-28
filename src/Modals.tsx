@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
+import { Button, Checkbox, Label, Modal } from "flowbite-react";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { MdOutlineKey } from "react-icons/md";
 
 function ReactLoginModel() {
   const [loginModalOpen, setLoginModalOpen] = useState(false);
@@ -30,7 +32,6 @@ function ReactLoginModel() {
     // registration logic here
     handleCloseRegisterModal();
   };
-
   return (
     <>
       <Button
@@ -52,30 +53,41 @@ function ReactLoginModel() {
             className="flex max-w-md flex-col gap-4 p-10"
             onSubmit={handleLoginSubmit}
           >
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="email1" value="Your email" />
-              </div>
-              <TextInput
-                id="email1"
-                type="email"
-                placeholder="name@flowbite.com"
-                required
+            <label
+              htmlFor="email"
+              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Your email
+            </label>
+            <div className="flex">
+              <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                <MdOutlineAlternateEmail />
+              </span>
+              <input
+                type="text"
+                id="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
+                className="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="example@email.com"
               />
             </div>
             <div>
               <div className="mb-2 block">
                 <Label htmlFor="password1" value="Your password" />
               </div>
-              <TextInput
-                id="password1"
-                type="password"
-                required
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-              />
+              <div className="flex">
+                <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                  <MdOutlineKey />
+                </span>
+                <input
+                  type="password"
+                  id="password1"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  className="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                />
+              </div>
             </div>
             <div className="flex items-center gap-2">
               <Checkbox id="remember" />
@@ -124,13 +136,19 @@ function ReactLoginModel() {
                 >
                   Your email
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  placeholder="name@flowbite.com"
-                  required
-                />
+                <div className="flex">
+                  <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                    <MdOutlineAlternateEmail />
+                  </span>
+                  <input
+                    type="text"
+                    id="email"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    className="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="example@email.com"
+                  />
+                </div>
               </div>
               <div className="mb-5">
                 <label
@@ -139,12 +157,18 @@ function ReactLoginModel() {
                 >
                   Your password
                 </label>
-                <input
-                  type="password"
-                  id="password"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  required
-                />
+                <div className="flex">
+                  <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                    <MdOutlineKey />
+                  </span>
+                  <input
+                    type="password"
+                    id="password1"
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    className="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
               </div>
               <div className="mb-5">
                 <label
@@ -153,12 +177,18 @@ function ReactLoginModel() {
                 >
                   Repeat password
                 </label>
-                <input
-                  type="password"
-                  id="repeat-password"
-                  className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  required
-                />
+                <div className="flex">
+                  <span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                    <MdOutlineKey />
+                  </span>
+                  <input
+                    type="password"
+                    id="password1"
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    className="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  />
+                </div>
               </div>
               <div className="flex items-start mb-5">
                 <div className="flex items-center h-5">
@@ -183,12 +213,25 @@ function ReactLoginModel() {
                   </a>
                 </label>
               </div>
-              <button
-                type="submit"
-                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              >
-                Register new account
-              </button>
+              <div className="flex justify-between">
+                <div>
+                  <button
+                    type="submit"
+                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Register
+                  </button>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    className="button focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                    onClick={handleCloseRegisterModal}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
             </form>
           </form>
         </Modal.Body>
